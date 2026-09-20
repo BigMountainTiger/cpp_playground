@@ -1,0 +1,21 @@
+build-essential:
+  include:
+    gcc: The GNU C compiler
+    g++: The GNU C++ compiler
+    make: A build automation tool that uses configuration files (Makefiles) to manage and direct the program compilation process
+    libc6-dev: The GNU C library development files and header files required for compiling basic C and C++ programs
+    dpkg-dev: Tools (such as dpkg-source and dpkg-architecture) used for unpacking, building, and uploading Debian source packages
+  install: |
+    sudo apt install build-essential
+  
+cmake:
+  What is cmake: a free, open-source, and cross-platform build system generator
+  features:
+    1: Platform Independence
+    2: Compiler-Agnostic
+    3: Smart Rebuilds -> rebuild only when changes are made
+    4: Out-of-Source Builds -> build to a directory different from the source directory
+    5: Built-in Suite -> CTest, CPack, etc.
+  install: |
+    sudo apt install cmake
+

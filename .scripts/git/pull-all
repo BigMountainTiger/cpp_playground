@@ -1,0 +1,23 @@
+#!/bin/bash -e
+
+REPO_DIR="$PROJECT_BASE/$PROJECT_NAME"
+echo "$REPO_DIR:" && cd $REPO_DIR
+
+git fetch
+ACTIVE_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+pull() {
+    BRANCH=$1
+    git checkout $BRANCH
+    git pull
+    echo
+}
+
+# fetch feature/sbx
+# fetch develop
+# fetch release
+pull master
+
+echo
+git checkout $ACTIVE_BRANCH
+git pull

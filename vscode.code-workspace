@@ -1,0 +1,32 @@
+{
+    "folders": [
+        {
+            "path": ".note"
+        },
+        {
+            "path": ".scripts"
+        },
+        {
+            "path": "01_hello_word"
+        },
+        {
+            "path": "02_simple_class"
+        }
+    ],
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "bash",
+                "env": {
+                    "PROJECT_BASE": "${workspaceFolder}",
+                    "PROJECT_NAME": ""
+                }
+            }
+        },
+        "files.exclude": {
+            "**/build": true
+        },
+        "cmake.autoDetectSourceDirectory": false
+    }
+}
