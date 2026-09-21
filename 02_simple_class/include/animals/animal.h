@@ -1,8 +1,18 @@
-#ifndef WHAT_TO_SAY_H
-#define WHAT_TO_SAY_H
+#ifndef ANIMAL_H
+#define ANIMAL_H
 
 #include <string>
 
-std::string what_to_say();
+class Animal {
+  protected:
+    std::string name_;
+
+  public:
+    Animal();
+    virtual ~Animal() = default;
+
+    virtual std::string get_name();
+    virtual std::string get_sound();
+};
 
 #endif

@@ -3,4 +3,4 @@
 SCRIPT_PATH="$(dirname -- "${BASH_SOURCE[0]}")"
 cd $SCRIPT_PATH/..
 
-rm -rf build && ls -la
+rm -rf build && find . -type d -name build

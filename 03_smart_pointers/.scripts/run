@@ -5,4 +5,4 @@ cd $SCRIPT_PATH/..
 
 cmake -B build
 cmake --build build
-./build/simple_class
+./build/smart_pointer

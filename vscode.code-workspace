@@ -11,6 +11,9 @@
         },
         {
             "path": "02_simple_class"
+        },
+        {
+            "path": "03_smart_pointers"
         }
     ],
     "settings": {
@@ -19,7 +22,7 @@
             "bash": {
                 "path": "bash",
                 "env": {
-                    "PROJECT_BASE": "${workspaceFolder}",
+                    "PROJECT_BASE": "/home/song/Sandbox/cpp_playground",
                     "PROJECT_NAME": ""
                 }
             }
@@ -27,6 +30,8 @@
         "files.exclude": {
             "**/build": true
         },
-        "cmake.autoDetectSourceDirectory": false
+        "cmake.autoDetectSourceDirectory": false,
+        "cmake.configureOnOpen": false,
+        "cmake.configureOnEdit": false
     }
 }

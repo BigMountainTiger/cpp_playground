@@ -1,11 +1,13 @@
 cmake_minimum_required(VERSION 3.10)
-project(HelloWorld LANGUAGES CXX)
+project(SimpleClass LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(hello_world src/main.cpp)
+add_executable(simple_class src/main.cpp)
 
-target_sources(hello_world PRIVATE
+target_sources(simple_class PRIVATE
     src/animals/amimal.cpp
+    src/animals/dog.cpp
+    src/animals/cat.cpp
 )

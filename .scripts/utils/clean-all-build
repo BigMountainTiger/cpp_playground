@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ ! -v PROJECT_BASE ]]; then
+	echo "PROJECT_BASE is not set, please set it" && exit 1
+fi
+
+cd $PROJECT_BASE
+
+directories=($(find . -mindepth 1 -maxdepth 1 -not -path '*/.*' -type d -printf '%f\n'))
+for directory in "${directories[@]}"; do
+	script="$directory/.scripts/clean"
+	if [ -f "$script" ]; then
+		echo "Running $script" && "$script"
+	fi
+done
