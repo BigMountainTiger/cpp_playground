@@ -1,0 +1,9 @@
+unique_ptr:
+  1: Use unique_ptr as the defaut choise as it has 0 overhead
+  2: You can return a unique_ptr from a function and and compiler automatically do remove() for you
+
+shared_ptr:
+  1: Use shared_ptr only when unique_ptr is not possible
+
+weak_ptr:
+  1: Use weak_ptr to avoid circular references

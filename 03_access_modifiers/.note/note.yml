@@ -1,0 +1,19 @@
+C++ has only 3 access modifiers:
+  1: public
+  2: protected
+  3: private
+
+default: private
+
+Member Accessibility:
+  public:
+    1: in class
+    2: in child classes
+    3: to the world
+
+  protected:
+    1: in class
+    2: in child classes
+
+  private:
+    1: in class

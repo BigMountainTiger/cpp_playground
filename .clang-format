@@ -1,5 +1,6 @@
 BasedOnStyle: LLVM
 DerivePointerAlignment: false
 IndentWidth: 4
+ColumnLimit: 150
 UseTab: Never
 PointerAlignment: Left

@@ -13,7 +13,10 @@
             "path": "02_simple_class"
         },
         {
-            "path": "03_smart_pointers"
+            "path": "03_access_modifiers"
+        },
+        {
+            "path": "04_smart_pointers"
         }
     ],
     "settings": {
