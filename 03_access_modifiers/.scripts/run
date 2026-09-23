@@ -7,4 +7,4 @@ cmake -B build
 cmake --build build
 
 echo && echo "Running..."
-./build/hello_world
+./build/access_modifiers

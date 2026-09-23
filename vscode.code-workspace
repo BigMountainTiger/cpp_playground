@@ -17,6 +17,9 @@
         },
         {
             "path": "04_smart_pointers"
+        },
+        {
+            "path": "05_strings"
         }
     ],
     "settings": {
@@ -33,6 +36,7 @@
         "files.exclude": {
             "**/build": true
         },
+        "git.autoRepositoryDetection": false,
         "cmake.autoDetectSourceDirectory": false,
         "cmake.configureOnOpen": false,
         "cmake.configureOnEdit": false

@@ -1,0 +1,22 @@
+std::unique_ptr: 
+  1: Zero Cost
+
+std::shared_ptr:
+  1: Non-Zero but Reasonable Cost
+  Memory Overhead:
+    Double the size of a raw pointer:
+      1: one to the actual object 
+      2: one to a control block - The control block dynamically allocates memory to hold the reference count and weak count
+  Performance Overhead:
+    Atomic operations:
+      1: Every time you copy or destroy a std::shared_ptr, it must increment or decrement the reference count using thread-safe, atomic operations
+      2: While much faster than a mutex, atomic operations still introduce a slight CPU overhead
+
+
+Best practices:
+  1: Always use std::unique_ptr whenever possible
+  2: 
+    Pass by reference: 
+      1: Do not pass smart pointers to functions by value unless you intend to transfer or share ownership
+      2: If a function just needs to use the underlying object, pass it as a raw reference (T&) or raw pointer (T*)
+      3: This completely bypasses the atomic reference-counting overhead of std::shared_ptr

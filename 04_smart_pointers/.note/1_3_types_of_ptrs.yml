@@ -1,9 +1,18 @@
 unique_ptr:
   1: Use unique_ptr as the defaut choise as it has 0 overhead
   2: You can return a unique_ptr from a function and and compiler automatically do remove() for you
+  syntax: |
+    auto ptr1 = std::make_unique<>()
+    auto ptr2 = std::move(ptr1);
 
 shared_ptr:
   1: Use shared_ptr only when unique_ptr is not possible
+  syntax: |
+    std::make_shared<>()
 
 weak_ptr:
   1: Use weak_ptr to avoid circular references
+  syntax: |
+    std::weak_ptr<Destructable> observer = a_shared_ptr
+  exmaple use case:
+    - Double linked list
