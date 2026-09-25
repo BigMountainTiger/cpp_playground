@@ -37,7 +37,8 @@
             }
         },
         "files.exclude": {
-            "**/build": true
+            "**/build": true,
+            "**/build-*": true
         },
         "git.autoRepositoryDetection": false,
         "cmake.autoDetectSourceDirectory": false,

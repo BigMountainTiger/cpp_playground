@@ -3,4 +3,5 @@
 SCRIPT_PATH="$(dirname -- "${BASH_SOURCE[0]}")"
 cd $SCRIPT_PATH/..
 
-rm -rf build && find . -type d -name build
+rm -rf build-linux && find . -type d -name build-linux
+rm -rf build-windows && find . -type d -name build-windows
