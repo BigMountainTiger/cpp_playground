@@ -7,7 +7,7 @@
             "path": ".scripts"
         },
         {
-            "path": "01_hello_word"
+            "path": "01_cmake"
         },
         {
             "path": "02_simple_class"
@@ -19,7 +19,10 @@
             "path": "04_smart_pointers"
         },
         {
-            "path": "05_strings"
+            "path": "05_passing_by_reference"
+        },
+        {
+            "path": "06_strings"
         }
     ],
     "settings": {

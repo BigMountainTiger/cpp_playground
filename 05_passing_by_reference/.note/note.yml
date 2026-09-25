@@ -1,0 +1,52 @@
+C programming language:
+  1: C programming language does not have native reference variables
+  2: C programming language is strictly passing by value
+
+Only C++:
+  1: has reference variables
+  2: has passing by reference
+
+In C++:
+  1: A reference variable is an alias—an alternative name—for an existing variable
+  2: It allows you to access or modify the original variable directly without making a copy of its data.
+
+Restrictions:
+  Mandatory Initialization: |
+    A reference must be initialized when it is created.
+    You cannot declare a blank reference variable
+  Cannot Be Reseated: 
+    comment: |
+      Once a reference is bound to a variable, it cannot be changed to point to a different variable later.
+      Any subsequent assignment will simply overwrite the value of the original variable
+    example - It's OK to create an alias from anther alias: |
+      int x = 10;
+
+      int& ref1 = x;
+      int& ref2 = ref1;
+      // Both ref1 and ref2 become aliases of x
+
+    example - an alias is alway the alias of the same variable: |
+      int x = 10;
+      int y = 20;
+
+      int& ref1 = x; // ref1 points to x
+      int& ref2 = y; // ref2 points to y
+
+      ref1 = ref2;  
+      // This does NOT make ref1 point to y!
+      // This is exactly equivalent to writing: x = y;
+
+  Cannot Be Null: |
+    Unlike pointers, references cannot be null or nullptr
+    They must always look at a valid object
+  No Extra Space/Syntax: |
+    Syntactically, you interact with a reference exactly like a regular variable. 
+    You do not need to use a dereference operator (*) or an arrow operator (->) to read or write its value
+
+Out of scope:
+  No: a reference going out of scope does not change or destroy the original object
+  In C++, a reference is simply an alias:
+    1: It ia an alias (an alternative name) for an existing object. 
+    2: References themselves are not independent objects in memory, 
+    3: when a reference variable goes out of scope, only the alias ceases to exist. 
+    4: The original object remains completely unaffected and unchanged.

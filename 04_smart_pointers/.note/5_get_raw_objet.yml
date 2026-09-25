@@ -1,0 +1,22 @@
+1:
+  Use: Dereferencing
+  In C++:
+    1: you dereference a smart pointer (std::unique_ptr or std::shared_ptr), exact same syntax as a standard raw pointer
+    2: thanks to "operator overloading"
+
+  Important Safety Rule:
+    what: Check for nullptr
+    cause: Dereferencing a smart pointer that is empty (contains a nullptr) causes undefined behavior
+    fix: |
+      std::unique_ptr<std::string> emptyPtr = nullptr;
+      if (emptyPtr) {
+          std::cout << *emptyPtr << std::endl; 
+      } else {
+          std::cout << "Pointer is empty!" << std::endl;
+      }
+
+2:
+  Use: The .get() method
+  The .get(): It returns a standard raw pointer (T*) to the managed object
+  Ownership: The smart pointer retains ownership of the memory
+  Never: never call delete on the returned raw pointer
