@@ -1,0 +1,25 @@
+The Control Object:
+  What: |
+    The std::string control object behaves like any ordinary variable.
+    Its location depends entirely on how and where you define it
+  Where:
+    On the Stack: |
+      If you declare it as a local variable inside a function (e.g., std::string s = "hello";), 
+      the control object lives on the stack
+    On the Heap: |
+      If you explicitly allocate it using new (e.g., auto s = new std::string("hello");), 
+      the object itself lives on the heap
+    In Static Memory: |
+      If you declare it as a global or static variable,
+      it lives in the program's static memory data segment
+
+Small String Optimization (SSO):
+  If you declare it as a local variable, the Character Storage (SSO):
+    1:
+      Short Strings: Usually ≤ 15 chars
+      Stack: Inside the control object
+      Very Fast: Avoids expensive heap allocations and improves cache locality
+    2:
+      Long Strings: Usually > 15 chars
+      Heap: Dynamically allocated
+      Slower: The control object allocates a buffer on the heap and keeps a pointer to it.

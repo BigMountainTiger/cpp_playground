@@ -1,0 +1,31 @@
+Introduced in C++17:
+
+std::string_view:
+  1: is a lightweight,
+  2: non-owning,
+  3: read-only wrapper around a sequence of characters
+
+Core Mechanics & Features:
+  Pass by Value: |
+    Because std::string_view is so small (typically 16 bytes on 64-bit systems), 
+    you should pass it by value rather than by reference
+  Cheap Substrings: |
+    Calling .substr() on a std::string_view doesn't generate a new string.
+    It just creates a narrower "window" over the same data
+  Trimming Utilities: |
+    It includes methods like .remove_prefix(n) and .remove_suffix(n)
+    which instantly narrow the view from the front or back without touching the underlying source
+
+The Dangerous Side:
+  Lifetime and Null-Termination: If the owner of the text dies, the view is left pointing to garbage
+  Modification of the main std::string: |
+    If the modification triggers a memory reallocation, the view becomes a dangling pointer
+  C-Style APIs expecting Null-Termination (\0): |
+    Functions like std::printf, strlen, or legacy C-functions require strings to end with a null terminator (\0). 
+    A std::string_view might look at only a slice of a string and is not guaranteed to be null-terminated
+
+Best Practices Summary:
+  Default to std::string_view: for read-only function parameters
+  Use std::string: |
+    if the function needs to modify the text, take ownership of it, 
+    or interface heavily with legacy C APIs that demand null-termination.

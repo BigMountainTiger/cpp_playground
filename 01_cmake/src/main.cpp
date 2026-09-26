@@ -1,7 +1,7 @@
 #include "../include/what_to_say.h"
-#include <iostream>
+#include <cstdio>
 
 int main() {
-    std::cout << what_to_say() << std::endl;
+    printf("%s\n", what_to_say().c_str());
     return 0;
 }
