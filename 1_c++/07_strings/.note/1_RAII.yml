@@ -1,0 +1,17 @@
+std::string is RAII:
+  1: 
+    RAII: a standard C++ string (std::string) is automatically destructed when it goes out of scope
+  2: |
+    Because std::string cleans itself up, 
+    you do not need to call any clear, free, or delete operations manually when using standard local variables
+  Caution:
+    1: created by "new"
+    2: |
+      std::string* s = new std::string("Hello World");
+      
+      // Crucial! need to delete, the destructor is never called, causing a leak
+      delete s;
+
+Conclusion:
+  1: std::string is safe to use
+  2: No danger of memory leak unless created by "new"

@@ -1,0 +1,12 @@
+#!/bin/bash -e
+
+SCRIPT_PATH="$(dirname -- "${BASH_SOURCE[0]}")"
+cd $SCRIPT_PATH/..
+
+TARGET="std-2-threads-example"
+
+cmake -B build
+cmake --build build --target $TARGET
+
+echo && echo "Running $TARGET..."
+./build/$TARGET

@@ -1,0 +1,7 @@
+.reset():
+  1: destroys the object
+  2: It cleans up the current resource and replaces it with a new one (or nullptr
+
+.release():
+  1: relinquishes ownership without destroying the object
+  2: It hands back a raw pointer, passing the responsibility of manual memory management to you

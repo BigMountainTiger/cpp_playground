@@ -1,0 +1,10 @@
+#!/bin/bash -e
+
+SCRIPT_PATH="$(dirname -- "${BASH_SOURCE[0]}")"
+cd $SCRIPT_PATH/..
+
+cmake -B build
+cmake --build build
+
+echo && echo "Running..."
+./build/reference_variables

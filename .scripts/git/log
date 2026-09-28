@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+REPO_DIR="$PROJECT_BASE/$PROJECT_NAME"
+echo "$REPO_DIR:" && cd $REPO_DIR
+
+git fetch
+
+echo && echo "Changes in the last commit:"
+git diff HEAD~1 HEAD --name-only && echo
+
+if [[ $# -eq 0 ]]; then
+	git log -2
+else
+	git log "$@"
+fi

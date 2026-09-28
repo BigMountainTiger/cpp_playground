@@ -1,0 +1,11 @@
+In modern C++:
+  1: 
+    What: Reference is preferred
+    Comment: | 
+      References are highly preferred and much more popular for everyday code,
+      while pointers are reserved for specific, necessary use cases.
+  2: 
+    What: The core philosophy of modern C++ style
+    Comment:
+      1: Use references when possible
+      2: Use pointers when necessary

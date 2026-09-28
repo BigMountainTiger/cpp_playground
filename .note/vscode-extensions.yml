@@ -1,0 +1,10 @@
+C/C++ Extension Pack:
+  Author: microsoft.com
+  note: It is the embrella package that includes multiple extensions
+  formatter:
+    note:
+      1: The official extension includes clang-format out of the box
+      2: It automatically finds formatting engine without requiring external downloads
+    Configuration:
+      file name: .clang-format
+      location: Placed in project's root directory or any parent directory containing the source files to format

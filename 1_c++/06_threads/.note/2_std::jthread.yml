@@ -1,0 +1,2 @@
+std::jthread:
+  introduced: C++20

@@ -1,0 +1,10 @@
+struct vs class: technically identical
+
+Minor differences:
+  Default access modifiers:
+    struct: public
+    class: private
+
+  Default Inheritance Mode:
+    struct: public
+    class: private

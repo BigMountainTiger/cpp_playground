@@ -1,0 +1,16 @@
+#!/bin/bash
+
+REPO_DIR="$PROJECT_BASE/$PROJECT_NAME"
+echo "$REPO_DIR:" && cd $REPO_DIR
+
+git reset --soft HEAD~
+git add-commit -m "Updated the cpp_playground repository"
+git push -f
+
+echo && git fetch
+echo -e "Wait for a second ...\n" && sleep 1
+
+echo && echo "Changes in the last commit:"
+git diff HEAD~1 HEAD --name-only && echo
+
+git log -2

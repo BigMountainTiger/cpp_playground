@@ -1,0 +1,22 @@
+CMake toolchain file:
+  1: a script (typically with a .cmake extension) that instructs CMake on how to compile code for a specific target platform.
+  2: |
+    While CMake natively probes your host computer to find default compilers and system libraries,
+    a toolchain file overrides these defaults.
+  3: |
+    It is loaded early during the initialization process to "re-wire" CMake for cross-compiling or 
+    targeting specific environments
+
+wine:
+  What: a compatibility layer that allows you to run Windows applications directly on Linux by translating Windows API calls into POSIX calls on the fly
+  Name meaning: Wine stands for Wine Is Not an Emulator
+  How it works: It acts as a translator between Windows programs and your Linux system
+  Performance: Because it does not run a heavy virtual machine or simulate a full operating system, it uses fewer resources and runs apps faster
+  example: |
+    sudo apt install wine
+    wine filename.exe
+
+mingw-w64:
+  What: Compile to Windows program
+  example: |
+    sudo apt install mingw-w64
