@@ -1,0 +1,22 @@
+std::mutex:
+  Need: #include <mutex>
+  Locks:
+    std::lock_guard: |
+      The simplest RAII wrapper
+      Locks the mutex on creation and unlocks it automatically when it goes out of scope
+    std::unique_lock: |
+      A highly flexible lock that can be explicitly unlocked and relocked, or moved. 
+      It is required when working with condition variables
+    std::scoped_lock (C++17): |
+      The modern standard for locking multiple mutexes simultaneously using a deadlock-avoidance algorithm
+
+std::condition_variable:
+  Need: #include <condition_variable>
+  Description: |
+    A synchronization primitive that allows threads to wait until a certain condition is met
+    It is typically used in conjunction with a mutex and a predicate
+
+  Usage: |
+    1. Acquire a lock on the associated mutex.
+    2. Wait on the condition variable with a predicate to check the condition
+    3. When the condition is met, the thread is notified and can proceed

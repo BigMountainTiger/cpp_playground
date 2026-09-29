@@ -1,0 +1,35 @@
+{
+    "folders": [
+        {
+            "path": ".note"
+        },
+        {
+            "path": ".scripts"
+        },
+        {
+            "path": "1_c++"
+        }
+    ],
+    "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+            "bash": {
+                "path": "bash",
+                "env": {
+                    "PROJECT_BASE": "/home/song/Sandbox/cpp_playground",
+                    "PROJECT_NAME": ""
+                }
+            }
+        },
+        "files.exclude": {
+            "**/build": true,
+            "**/build-*": true
+        },
+        // GIT
+        "git.autoRepositoryDetection": false,
+        // CMake
+        "cmake.autoDetectSourceDirectory": false,
+        "cmake.configureOnOpen": false,
+        "cmake.configureOnEdit": false
+    }
+}

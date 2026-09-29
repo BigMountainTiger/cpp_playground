@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+REPO_DIR="$PROJECT_BASE/$PROJECT_NAME"
+echo "$REPO_DIR:" && cd $REPO_DIR
+
+git reflog expire --expire-unreachable=now --all
+git gc --prune=now --aggressive
+
+echo && echo "Disk use after the prune:" && du -h -s
