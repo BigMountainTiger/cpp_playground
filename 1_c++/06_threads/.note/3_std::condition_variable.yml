@@ -1,0 +1,13 @@
+A condition variable (std::condition_variable):
+  Definition: |
+    A synchronization primitive in C++ that allows threads to suspend execution (block) until another thread modifies
+    a shared variable and signals that a specific condition has been met
+  Core Components Needed:
+    1: std::condition_variable – The signaling mechanism
+    2: std::mutex – Protects the shared state
+    3: std::unique_lock<std::mutex> – Used to lock the mutex while waiting on the condition variable
+    4: 
+      What it used for: A Boolean Predicate – The actual condition/flag being checked (e.g., bool ready or !queue.empty())
+      What is a preficate: |
+        In C++, a predicate is a callable object (like a function, functor, or lambda) 
+        that evaluates a condition and returns a boolean value (true or false)

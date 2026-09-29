@@ -1,0 +1,20 @@
+lambda function:
+  C++11 and later: lambda functions are supported
+  Anatomy of a Lambda:
+    Example: |
+      [ capture_clause ] ( parameters ) specifiers -> return_type { body };
+    1:
+      Capture clause: specifies which variables from the surrounding scope are accessible inside the lambda.
+      options: 
+        []: Capture nothing
+        [x]: Capture variable x by value (makes a read-only copy)
+        [&x]: Capture variable x by reference (can modify the original variable)
+        [=]: Capture all local variables used in the body by value
+        [&]: Capture all local variables used in the body by reference
+        [=, &x]: Capture everything by value, but x by reference
+    2:
+      Parameter list: similar to a regular function, it defines the inputs to the lambda.
+    3:
+      Body: the block of code that performs the task.
+    4:
+      Return type (optional): can be specified using `auto` or explicitly.
